@@ -18,6 +18,33 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
+    <style>
+        .service-card-title {
+            min-height: 2.1em; /* Space for up to 2 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .service-card-desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 3.8em; /* Ensure exactly 2 lines of space at 1.9em line-height */
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .team-photo-mobile {
+                max-width: 80% !important;
+                margin: 20px auto 0 !important;
+                display: block !important;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -40,7 +67,7 @@
                                     <a href="index.html">
                                         <img class="logo-main" src="images/logo-black.webp" alt="">
                                         <img class="logo-scroll" src="images/logo-black.webp" alt="">
-                                        <img class="logo-mobile" src="images/logo-white.webp" alt="">
+                                        <img class="logo-mobile" src="images/logo-black.webp" alt="">
                                     </a>
                                 </div>
                                 <!-- logo end -->
@@ -100,6 +127,9 @@
                         <div class="col-lg-6">
                             <div class="subtitle s2 mb-3 wow fadeInUp" data-wow-delay=".0s">Welcome to The Dental Edge
                             </div>
+                            <div class="d-lg-none mb-3">
+                                <img src="images/misc/c1.webp" class="w-100 rounded" alt="">
+                            </div>
                             <h1 class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 2.8rem; line-height: 1.2;">Advanced Dental Care in Nashik <br class="d-none d-lg-block">with a Gentle Touch</h1>
                             <p class="col-lg-10 wow fadeInUp" data-wow-delay=".4s">At The Dental Edge, we provide
                                 personalized and comfortable dental care using modern techniques and advanced
@@ -129,7 +159,7 @@
 
                         <div class="col-lg-6">
                             <div class="relative">
-                                <div class="bg-dark text-light shadow-1 abs end-0 abs-middle p-4 rounded-1 overflow-hidden z-2 wow fadeInRight"
+                                <div class="bg-dark text-light shadow-1 abs end-0 abs-middle p-4 rounded-1 overflow-hidden z-2 wow fadeInRight d-none d-md-block"
                                     data-wow-delay=".5s">
                                     <div class="d-flex justify-content-center">
                                         <i class="fs-60 text-white icon_clock"></i>
@@ -140,7 +170,7 @@
                                     </div>
                                 </div>
 
-                                <div class="bg-white shadow-1 abs start-0 bottom-10 p-4 rounded-1 overflow-hidden z-2 wow fadeInLeft"
+                                <div class="bg-white shadow-1 abs start-0 bottom-10 p-4 rounded-1 overflow-hidden z-2 wow fadeInLeft d-none d-md-block"
                                     data-wow-delay=".7s">
                                     <div class="d-flex justify-content-center">
                                         <i class="fs-60 id-color icon_phone"></i>
@@ -150,7 +180,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="images/misc/c1.webp" class="w-100 wow fadeInUp" data-wow-delay=".3s" alt="">
+                                <img src="images/misc/c1.webp" class="w-100 wow fadeInUp d-none d-lg-block" data-wow-delay=".3s" alt="">
                             </div>
                         </div>
 
@@ -163,7 +193,7 @@
                     <div class="row gy-4 gx-5 align-items-center">
                         <div class="col-lg-6">
                             <div class="row g-4 align-items-center">
-                                <div class="col-sm-6 text-end">
+                                <div class="col-6 text-end">
                                     <div class="w-80 rounded-1 overflow-hidden mb-25 wow zoomIn d-inline-block">
                                         <img src="images/misc/s2.webp" class="w-100 wow scaleIn" alt="">
                                     </div>
@@ -172,7 +202,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <div class="w-100 rounded-1 overflow-hidden mb-25 wow zoomIn d-inline-block">
                                         <img src="images/misc/p3.webp" class="w-100 wow scaleIn" alt="">
                                     </div>
@@ -216,53 +246,53 @@
                         </div>
                     </div>
                     <div class="row g-4">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="hover">
-                                <div class="h-100">
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="hover h-100">
+                                <div class="h-100 d-flex flex-column">
                                     <img src="images/RCT.webp" class="w-100 rounded-1 mb-3 wow scaleIn" alt="" style="object-fit: cover; height: 180px;">
-                                    <div class="relative mt-4 wow fadeInUp" style="padding-bottom: 50px;">
-                                        <h4>Root Canal Treatment (RCT)</h4>
-                                        <p>Treat tooth infection and save your natural tooth comfortably.</p>
-                                        <a href="service-general-dentistry.html" class="fw-bold text-decoration-none" style="color: #10244b; position: absolute; bottom: 0; left: 0;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <div class="mt-4 wow fadeInUp flex-grow-1 d-flex flex-column">
+                                        <h4 class="service-card-title">Root Canal Treatment (RCT)</h4>
+                                        <p class="service-card-desc">Treat tooth infection and save your natural tooth comfortably.</p>
+                                        <a href="service-root-canal-treatment.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="hover">
-                                <div class="h-100">
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="hover h-100">
+                                <div class="h-100 d-flex flex-column">
                                     <img src="images/orthodontic-treatments.jpg" class="w-100 rounded-1 mb-3 wow scaleIn" alt="" style="object-fit: cover; height: 180px;">
-                                    <div class="relative mt-4 wow fadeInUp" style="padding-bottom: 50px;">
-                                        <h4>Dental Braces</h4>
-                                        <p>Align your teeth properly for a better smile and bite over time.</p>
-                                        <a href="service-cosmetic-dentistry.html" class="fw-bold text-decoration-none" style="color: #10244b; position: absolute; bottom: 0; left: 0;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <div class="mt-4 wow fadeInUp flex-grow-1 d-flex flex-column">
+                                        <h4 class="service-card-title">Dental Braces</h4>
+                                        <p class="service-card-desc">Align your teeth properly for a better smile and bite over time.</p>
+                                        <a href="service-braces-and-ligners.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="hover">
-                                <div class="h-100">
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="hover h-100">
+                                <div class="h-100 d-flex flex-column">
                                     <img src="images/invisalign-treatment.jpg" class="w-100 rounded-1 mb-3 wow scaleIn" alt="" style="object-fit: cover; height: 180px;">
-                                    <div class="relative mt-4 wow fadeInUp" style="padding-bottom: 50px;">
-                                        <h4>Dental Implants</h4>
-                                        <p>Replace missing teeth with a strong, natural-looking permanent solution.</p>
-                                        <a href="service-pediatric-dentistry.html" class="fw-bold text-decoration-none" style="color: #10244b; position: absolute; bottom: 0; left: 0;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <div class="mt-4 wow fadeInUp flex-grow-1 d-flex flex-column">
+                                        <h4 class="service-card-title">Dental Implants</h4>
+                                        <p class="service-card-desc">Replace missing teeth with a permanent solution.</p>
+                                        <a href="service-dental-implants.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="hover">
-                                <div class="h-100">
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="hover h-100">
+                                <div class="h-100 d-flex flex-column">
                                     <img src="images/crowns-and-bridge.jpg" class="w-100 rounded-1 mb-3 wow scaleIn" alt="" style="object-fit: cover; height: 180px;">
-                                    <div class="relative mt-4 wow fadeInUp" style="padding-bottom: 50px;">
-                                        <h4>Crowns & Bridges</h4>
-                                        <p>Repair damaged teeth or fill gaps with natural-looking restorations.</p>
-                                        <a href="service-restorative-dentistry.html" class="fw-bold text-decoration-none" style="color: #10244b; position: absolute; bottom: 0; left: 0;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <div class="mt-4 wow fadeInUp flex-grow-1 d-flex flex-column">
+                                        <h4 class="service-card-title">Crowns & Bridges</h4>
+                                        <p class="service-card-desc">Repair damaged teeth or fill gaps with natural-looking restorations.</p>
+                                        <a href="service-crowns-and-ridges.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +324,7 @@
                             </div>
                             <div class="row g-0 align-items-center">
                                 <div class="col-md-4">
-                                    <img src="images/team/1.webp" class="w-100 rounded" alt="">
+                                    <img src="images/team/1.webp" class="w-100 rounded team-photo-mobile" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="h-100 p-40">
@@ -497,8 +527,8 @@
                         .t-card {
                             background: #fff;
                             border-radius: 12px;
-                            padding: 25px;
-                            width: 400px;
+                            padding: 18px;
+                            width: 330px;
                             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
                             text-align: left;
                             white-space: normal;
@@ -511,9 +541,9 @@
                         }
                         .t-text {
                             color: #555;
-                            font-size: 15px;
-                            line-height: 1.6;
-                            margin-bottom: 25px;
+                            font-size: 13px;
+                            line-height: 1.5;
+                            margin-bottom: 15px;
                             flex-grow: 1;
                         }
                         .t-footer {
@@ -524,8 +554,8 @@
                             align-items: center;
                         }
                         .t-avatar {
-                            width: 45px;
-                            height: 45px;
+                            width: 38px;
+                            height: 38px;
                             border-radius: 50%;
                             object-fit: cover;
                             background-color: rgba(0, 0, 0, 0.05);
@@ -533,152 +563,184 @@
                             align-items: center;
                             justify-content: center;
                             font-weight: 700;
-                            font-size: 18px;
+                            font-size: 16px;
                             margin-right: 12px;
                         }
                         .t-name {
                             font-weight: 700;
                             color: #222;
-                            font-size: 15px;
+                            font-size: 14px;
                         }
                         @media (max-width: 768px) {
-                            .t-card { width: 320px; }
+                            .t-card { width: 280px; }
                         }
                     </style>
 
                     <div class="marquee-wrapper mt-3">
                         <div class="marquee-track left">
                             <!-- Row 1: Items 1 to 5 -->
+
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/1.webp" class="t-avatar" alt="Vineet Joshi">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocK7MxhFH3PGrLcSF6PaGj9Clxbls60eSi_3xcczVZZ-Igwpk9mj=s1920" class="t-avatar" alt="Vineet Joshi" referrerpolicy="no-referrer">
                                         <div class="t-name">Vineet Joshi</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-                                </div>
-                                <div class="t-text">"Dr. Tulsi explained everything clearly about my cavities and treatment. The cleaning was thorough and the appointment was smooth with minimal waiting. Very comfortable experience."</div>
-                                <div class="t-footer">
-                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
-                                </div>
-                            </div>
-                            <div class="t-card">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <div class="t-user">
-                                        <img src="images/testimonial/2.webp" class="t-avatar" alt="Tejas Bhojwani">
-                                        <div class="t-name">Tejas Bhojwani</div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                 </div>
-                                <div class="t-text">"One of the best dental clinics I’ve visited. Clean environment, modern equipment, and a very professional approach. Completely satisfied with the service."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Dr. Tulsi provided clear communication about the cavities, explaining which fillings required urgent attention and which could be deferred. The teeth cleaning was completed first and was done thoroughly. Appointment flow was smooth with minimal waiting time, making the overall experience efficient and comfortable."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/anu.png" class="t-avatar" alt="Anu Kadam">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVlFgPAqeOdlEdXcEc0xVNoJ5lB-pWWJbnaXMHRKmUvHCcAXn4lHg=s1920" class="t-avatar" alt="tejas bhojwani" referrerpolicy="no-referrer">
+                                        <div class="t-name">tejas bhojwani</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">"“One of the best dental clinics I’ve visited. Modern equipment, clean environment, and very professional approach. The doctor took time to understand my problem and suggested the right treatment. Completely satisfied with the service.”"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJjJc97wH_8KbQCZHQTzu_lbJeZfr1-CCIO03QZxf_ugjo6KA=s1920" class="t-avatar" alt="Anu Kadam" referrerpolicy="no-referrer">
                                         <div class="t-name">Anu Kadam</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-                                </div>
-                                <div class="t-text">"I had my aligner treatment done here. The doctor was very supportive and professional. The entire process was smooth and I’m very happy with the results."</div>
-                                <div class="t-footer">
-                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
-                                </div>
-                            </div>
-                            <div class="t-card">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <div class="t-user">
-                                        <img src="images/testimonial/khushboo.png" class="t-avatar" alt="Khushboo Chhajed">
-                                        <div class="t-name">Khushboo Chhajed</div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                 </div>
-                                <div class="t-text">"Great experience! The dentist was very gentle and explained everything clearly. Highly recommended!"</div>
-                                <div class="t-footer">
+                                <div class="t-text">"I had my aligner treatment done at this dental clinic. The doctor was very professional and supportive, and the treatment experience was smooth. I’m satisfied with the results. Highly recommended."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/urvashi.png" class="t-avatar" alt="Urvashi Varma">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocL0sa8JkJ7OBkUOpDGtMPB4uRQGhG58uZjfmWdlt3u0ybP4fd0=s1920" class="t-avatar" alt="khushboo chhajed" referrerpolicy="no-referrer">
+                                        <div class="t-name">khushboo chhajed</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">""Great experience! The dentist was very gentle and explained everything clearly. Highly recommended!""</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocIuzpy3VgblqLZ0jp_KDcUNgk1CTTnw_NFSb71x5jHx0fN1e40=s1920" class="t-avatar" alt="Urvashi Varma" referrerpolicy="no-referrer">
                                         <div class="t-name">Urvashi Varma</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"I was worried taking my 17-month-old daughter for her first visit, but the doctor handled her with great care and patience. It was a big relief!"</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Honestly, i was worrried as i was taking my 17 month old daughter for her first dental checkup. But Tulsi, with her handson experience and patience, managed to check her so easily. Even my daughter enjoyed the whole process! :) It was a big big relief! Also, her suggestions were quite helpful wrt my mom's tooth implant and yearly cleaning of teeth."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             
                             <!-- Duplicate for continuous scroll -->
+
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/1.webp" class="t-avatar" alt="Vineet Joshi">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocK7MxhFH3PGrLcSF6PaGj9Clxbls60eSi_3xcczVZZ-Igwpk9mj=s1920" class="t-avatar" alt="Vineet Joshi" referrerpolicy="no-referrer">
                                         <div class="t-name">Vineet Joshi</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-                                </div>
-                                <div class="t-text">"Dr. Tulsi explained everything clearly about my cavities and treatment. The cleaning was thorough and the appointment was smooth with minimal waiting. Very comfortable experience."</div>
-                                <div class="t-footer">
-                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
-                                </div>
-                            </div>
-                            <div class="t-card">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <div class="t-user">
-                                        <img src="images/testimonial/2.webp" class="t-avatar" alt="Tejas Bhojwani">
-                                        <div class="t-name">Tejas Bhojwani</div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                 </div>
-                                <div class="t-text">"One of the best dental clinics I’ve visited. Clean environment, modern equipment, and a very professional approach. Completely satisfied with the service."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Dr. Tulsi provided clear communication about the cavities, explaining which fillings required urgent attention and which could be deferred. The teeth cleaning was completed first and was done thoroughly. Appointment flow was smooth with minimal waiting time, making the overall experience efficient and comfortable."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/3.webp" class="t-avatar" alt="Anu Kadam">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVlFgPAqeOdlEdXcEc0xVNoJ5lB-pWWJbnaXMHRKmUvHCcAXn4lHg=s1920" class="t-avatar" alt="tejas bhojwani" referrerpolicy="no-referrer">
+                                        <div class="t-name">tejas bhojwani</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">"“One of the best dental clinics I’ve visited. Modern equipment, clean environment, and very professional approach. The doctor took time to understand my problem and suggested the right treatment. Completely satisfied with the service.”"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJjJc97wH_8KbQCZHQTzu_lbJeZfr1-CCIO03QZxf_ugjo6KA=s1920" class="t-avatar" alt="Anu Kadam" referrerpolicy="no-referrer">
                                         <div class="t-name">Anu Kadam</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-                                </div>
-                                <div class="t-text">"I had my aligner treatment done here. The doctor was very supportive and professional. The entire process was smooth and I’m very happy with the results."</div>
-                                <div class="t-footer">
-                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
-                                </div>
-                            </div>
-                            <div class="t-card">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <div class="t-user">
-                                        <img src="images/testimonial/4.webp" class="t-avatar" alt="Khushboo Chhajed">
-                                        <div class="t-name">Khushboo Chhajed</div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
                                 </div>
-                                <div class="t-text">"Great experience! The dentist was very gentle and explained everything clearly. Highly recommended!"</div>
-                                <div class="t-footer">
+                                <div class="t-text">"I had my aligner treatment done at this dental clinic. The doctor was very professional and supportive, and the treatment experience was smooth. I’m satisfied with the results. Highly recommended."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/5.webp" class="t-avatar" alt="Urvashi Varma">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocL0sa8JkJ7OBkUOpDGtMPB4uRQGhG58uZjfmWdlt3u0ybP4fd0=s1920" class="t-avatar" alt="khushboo chhajed" referrerpolicy="no-referrer">
+                                        <div class="t-name">khushboo chhajed</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">""Great experience! The dentist was very gentle and explained everything clearly. Highly recommended!""</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocIuzpy3VgblqLZ0jp_KDcUNgk1CTTnw_NFSb71x5jHx0fN1e40=s1920" class="t-avatar" alt="Urvashi Varma" referrerpolicy="no-referrer">
                                         <div class="t-name">Urvashi Varma</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"I was worried taking my 17-month-old daughter for her first visit, but the doctor handled her with great care and patience. It was a big relief!"</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Honestly, i was worrried as i was taking my 17 month old daughter for her first dental checkup. But Tulsi, with her handson experience and patience, managed to check her so easily. Even my daughter enjoyed the whole process! :) It was a big big relief! Also, her suggestions were quite helpful wrt my mom's tooth implant and yearly cleaning of teeth."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                         </div>
@@ -686,115 +748,173 @@
 
                     <div class="marquee-wrapper">
                         <div class="marquee-track right">
-                            <!-- Row 2: Items 6 to 9 -->
+                            <!-- Row 2: Items 6 to 10 -->
+
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/priya.png" class="t-avatar" alt="Priya Parshurame">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocKtwdW3geeOxMiOmRd4jGmKYn8g9kCbMU094aEwmxniN6vQWw=s1920" class="t-avatar" alt="Priya Parshurame" referrerpolicy="no-referrer">
                                         <div class="t-name">Priya Parshurame</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Excellent diagnosis and treatment. Very skilled and professional. Thank you for the great care."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Excellent diagnosis and treatment. Proficient and super skilled. Thank you very much"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/7.webp" class="t-avatar" alt="Raj Chopda">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWgsWs9iVQsdpAngklswQvR2HzktvbCT0jYz4KpHLQn1SQ6Pipo=s1920" class="t-avatar" alt="Raj Chopda" referrerpolicy="no-referrer">
                                         <div class="t-name">Raj Chopda</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"The doctor understands the root problem, listens patiently, and provides excellent treatment. Highly satisfied."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Best doctor , understands the root problem, is patient listener and then treats really nice ."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/8.webp" class="t-avatar" alt="Achyut Bhutada">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJ-eecJOaYoJQkboPz1vgr6UV1cE9t9OEzS0cRBHAxsTY5JHA=s1920" class="t-avatar" alt="Achyut Bhutada" referrerpolicy="no-referrer">
                                         <div class="t-name">Achyut Bhutada</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Wonderful dental experience! The doctor and team made me feel comfortable and the treatment exceeded my expectations."</div>
-                                <div class="t-footer">
+                                <div class="t-text">""Thank you to The Dental Edge for the wonderful dental experience! Dr. Tulsi and the team made me feel comfortable, and the treatment exceeded my expectations. I’m so thankful for your care and effort.""</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/user.webp" class="t-avatar" alt="Vishal Amesar">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJu5DIYM6mbcYIPlzqYkWe2yESjzO40BcgFd_o2PK6o1uOasQ=s1920" class="t-avatar" alt="Sayyam" referrerpolicy="no-referrer">
+                                        <div class="t-name">Sayyam</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">"I was a good experience where I got my cavities removed and and got filling done."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWoP-A257XUWwuHogvM48LcGMB7OPOUQN9ZmorzQ2ur001olPs=s1920" class="t-avatar" alt="Vishal Amesar" referrerpolicy="no-referrer">
                                         <div class="t-name">Vishal Amesar</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Had an excellent experience with my treatment. Very professional and caring. Highly satisfied with the results."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Had an excellent experience with my dental treatment. Very professional and caring. Highly satisfied with the results"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             
                             <!-- Duplicate for continuous scroll -->
+
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/priya.png" class="t-avatar" alt="Priya Parshurame">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocKtwdW3geeOxMiOmRd4jGmKYn8g9kCbMU094aEwmxniN6vQWw=s1920" class="t-avatar" alt="Priya Parshurame" referrerpolicy="no-referrer">
                                         <div class="t-name">Priya Parshurame</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Excellent diagnosis and treatment. Very skilled and professional. Thank you for the great care."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Excellent diagnosis and treatment. Proficient and super skilled. Thank you very much"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/7.webp" class="t-avatar" alt="Raj Chopda">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWgsWs9iVQsdpAngklswQvR2HzktvbCT0jYz4KpHLQn1SQ6Pipo=s1920" class="t-avatar" alt="Raj Chopda" referrerpolicy="no-referrer">
                                         <div class="t-name">Raj Chopda</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"The doctor understands the root problem, listens patiently, and provides excellent treatment. Highly satisfied."</div>
-                                <div class="t-footer">
+                                <div class="t-text">"Best doctor , understands the root problem, is patient listener and then treats really nice ."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/8.webp" class="t-avatar" alt="Achyut Bhutada">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJ-eecJOaYoJQkboPz1vgr6UV1cE9t9OEzS0cRBHAxsTY5JHA=s1920" class="t-avatar" alt="Achyut Bhutada" referrerpolicy="no-referrer">
                                         <div class="t-name">Achyut Bhutada</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Wonderful dental experience! The doctor and team made me feel comfortable and the treatment exceeded my expectations."</div>
-                                <div class="t-footer">
+                                <div class="t-text">""Thank you to The Dental Edge for the wonderful dental experience! Dr. Tulsi and the team made me feel comfortable, and the treatment exceeded my expectations. I’m so thankful for your care and effort.""</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
                                     <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
                             <div class="t-card">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="t-user">
-                                        <img src="images/testimonial/user.webp" class="t-avatar" alt="Vishal Amesar">
-                                        <div class="t-name">Vishal Amesar</div>
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJu5DIYM6mbcYIPlzqYkWe2yESjzO40BcgFd_o2PK6o1uOasQ=s1920" class="t-avatar" alt="Sayyam" referrerpolicy="no-referrer">
+                                        <div class="t-name">Sayyam</div>
                                     </div>
-                                    <i class="fa-brands fa-google" style="color: #4285F4; font-size: 22px;"></i>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
                                 </div>
-                                <div class="t-text">"Had an excellent experience with my treatment. Very professional and caring. Highly satisfied with the results."</div>
-                                <div class="t-footer">
-                                    <div class="t-stars"><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i></div>
+                                <div class="t-text">"I was a good experience where I got my cavities removed and and got filling done."</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
                                 </div>
                             </div>
-                </div>
-            </section>
+                            <div class="t-card">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <div class="t-user">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWoP-A257XUWwuHogvM48LcGMB7OPOUQN9ZmorzQ2ur001olPs=s1920" class="t-avatar" alt="Vishal Amesar" referrerpolicy="no-referrer">
+                                        <div class="t-name">Vishal Amesar</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="t-text">"Had an excellent experience with my dental treatment. Very professional and caring. Highly satisfied with the results"</div>
+                                <div class="t-footer d-flex justify-content-between align-items-center mt-3">
+                                    <div class="t-stars" style="display: flex; gap: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" focusable="false"><path d="M11.99 17.561l-5.636 3.424a1.002 1.002 0 0 1-1.503-1.077l1.498-6.44-4.887-4.186a1.001 1.001 0 0 1 .573-1.748l6.577-.57 2.56-6.136a1.002 1.002 0 0 1 1.848 0l2.56 6.136 6.577.57a1.001 1.001 0 0 1 .573 1.748l-4.887 4.186 1.498 6.44a1.002 1.002 0 0 1-1.503 1.077l-5.636-3.424z" fill="#FBBC04"></path></svg></div>
+                                    <span style="font-size: 11px; color: #5f6368; font-weight: 500;">Google review</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>\n            </section>
 
         </div>
         <!-- content end -->

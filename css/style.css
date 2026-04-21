@@ -12014,8 +12014,9 @@ img {
     border-bottom: none;
   }
 
-  header.header-mobile #mainmenu li a {
-    color: #ffffff;
+  header.header-mobile #mainmenu li a,
+  header.header-mobile #mainmenu li ul li a {
+    color: #10244b !important;
   }
 
   .dark-scheme header.header-mobile #mainmenu li a.menu-item {
