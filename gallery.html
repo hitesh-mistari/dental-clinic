@@ -42,10 +42,6 @@
         header.transparent.header-light {
             background: #fff !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            height: 90px !important;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s;
         }
 
         #logo img {
@@ -143,10 +139,6 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 992px) {
-            header.transparent.header-light {
-                height: 70px !important;
-            }
-
             #logo img {
                 max-height: 35px !important;
             }
@@ -179,18 +171,6 @@
 
             .gallery-item-wrap {
                 margin-bottom: 20px;
-            }
-
-            #menu-btn {
-                display: block !important;
-                cursor: pointer;
-            }
-
-            #menu-btn:before {
-                color: #333 !important;
-                font-family: FontAwesome;
-                content: "\f0c9";
-                font-size: 20px;
             }
         }
     </style>
@@ -227,24 +207,17 @@
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="index.html">Home</a></li>
                                     <li><a class="menu-item" href="about.html">About Us</a></li>
-                                    <li><a class="menu-item" href="services.html">Services</a>
-
-                                        <ul>
-                                            <li><a href="service-root-canal-treatment.html">Root Canal Treatment</a>
-                                            </li>
+                                    <li><a class="menu-item" href="services.html">Services</a><ul>
+                                            <li><a href="service-root-canal-treatment.html">Root Canal Treatment</a></li>
                                             <li><a href="service-braces-and-ligners.html">Braces & Aligners</a></li>
                                             <li><a href="service-dental-implants.html">Dental Implants</a></li>
-                                            <li><a href="service-crowns-and-ridges.html">Crowns & Bridges</a>
-                                            </li>
-                                            <li><a href="service-laser-dentistry.html">Laser Dentistry</a>
-                                            </li>
+                                            <li><a href="service-crowns-and-ridges.html">Crowns & Bridges</a></li>
+                                            <li><a href="service-laser-dentistry.html">Laser Dentistry</a></li>
                                             <li><a href="services.html">All Services</a></li>
                                         </ul>
                                     </li>
-
-                                    <li><a href="gallery.html">Gallery</a></li>
-
-                                    <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+                                    <li><a class="menu-item" href="gallery.html">Gallery</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
                                 </ul>
 
                                 <!-- mainmenu end -->
@@ -566,22 +539,6 @@
     <script src="js/designesia.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuBtn = document.getElementById('menu-btn');
-            var mainmenu = document.getElementById('mainmenu');
-            if (menuBtn && mainmenu) {
-                menuBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    if (mainmenu.style.display === 'block') {
-                        mainmenu.style.display = 'none';
-                    } else {
-                        mainmenu.style.display = 'block';
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
