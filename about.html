@@ -26,6 +26,46 @@
                 display: block !important;
             }
         }
+
+        /* Ratings mobile fix */
+        .mobile-ratings {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .mobile-ratings>div {
+            margin: 0 !important;
+            flex: 1;
+        }
+
+        .mobile-ratings i.fs-1 {
+            font-size: 24px !important;
+        }
+
+        .mobile-ratings .fs-3 {
+            font-size: 18px !important;
+        }
+
+        .p-mobile-20 {
+            padding: 20px !important;
+        }
+
+        .social-icons-wrapper {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+        }
+
+        @media (max-width: 767px) {
+            .social-icons-wrapper {
+                position: static !important;
+                margin-top: 15px !important;
+                margin-bottom: -15px !important;
+            }
+        }
     </style>
 
 </head>
@@ -39,7 +79,7 @@
         <!-- preloader end -->
 
         <!-- header begin -->
-        <header class="transparent header-light">
+        <header class="header-light">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -119,16 +159,13 @@
 
             <div id="top"></div>
 
-            <section id="subheader" class="bg-color-op-1 text-center">
-                <div class="container relative z-2">
-                    <div class="row align-items-center">
+            <section id="subheader" class="section-dark" style="background: #10244b !important; padding: 160px 0 70px 0; text-align: left !important;">
+                <div class="container">
+                    <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="wow fadeInUp">About Us</h1>
-                            <div class="border-bottom my-3"></div>
-                            <ul class="crumb wow fadeInDown">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active">About Us</li>
-                            </ul>
+                            <span style="color: #4db6ac; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 15px; display: block;">About Us</span>
+                            <h1 class="wow fadeInUp" style="color: #ffffff; font-size: 48px; font-weight: 700; margin-bottom: 10px;">About Our Clinic</h1>
+                            <p class="wow fadeIn" data-wow-delay=".3s" style="color: rgba(255, 255, 255, .8); font-size: 18px; max-width: 600px;">At The Dental Edge, we focus on making dental care simple, comfortable, and effective for every patient.</p>
                         </div>
                     </div>
                 </div>
@@ -203,27 +240,62 @@
                     </div>
                     <div class="col-md-12">
                         <div class="bg-light rounded-1 relative overflow-hidden">
-                            <div class="abs end-0 bottom-0 p-5 fs-150 fw-bold op-1 lh-1 id-color">1
-                            </div>
+
                             <div class="row g-0 align-items-center">
                                 <div class="col-md-4">
                                     <img src="images/team/1.webp" class="w-100 rounded team-photo-mobile" alt="">
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="h-100 p-40">
+                                    <div class="h-100 p-40 p-mobile-20">
                                         <h3 class="mb-0">Dr. Tulsi Bhutada Amesar</h3>
-                                        <p class="id-color">Dental Surgeon</p>
+                                        <p class="id-color mb-1 fw-bold">BDS &mdash; 9 Years Experience</p>
+                                        <p class="text-secondary fw-bold" style="font-size:14px;">Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist</p>
 
-                                        <h4>Qualification</h4>
-                                        <p>BDS (Bachelor of Dental Surgery)</p>
+                                        <hr style="border-top: 1px dashed #ccc; margin: 20px 0;">
 
-                                        <h4>Focus Areas</h4>
+                                        <p class="text-secondary" style="line-height: 1.8;">
+                                            <strong>Dr. Tulsi Bhutada Amesar</strong> is a Dentist, Dental Surgeon and Cosmetic/Aesthetic Dentist and has an experience of 9 years in these fields. She completed her BDS from Maharashtra University of Health Sciences in 2017.
+                                        </p>
+
+                                        <h5 class="mt-4 text-dark mb-3">Focus Areas</h5>
                                         <ul class="ul-check">
                                             <li>Root Canal Treatment</li>
                                             <li>Braces</li>
                                             <li>Implants</li>
                                             <li>Laser Dentistry</li>
                                         </ul>
+
+                                        <div class="social-icons-wrapper">
+                                            <a href="https://www.instagram.com/the.dentaledge/" target="_blank" class="fs-4 me-3" style="background: -webkit-linear-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="https://www.facebook.com/" target="_blank" class="fs-4 me-3" style="color: #1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="https://api.whatsapp.com/send?phone=917405940229" target="_blank" class="fs-4 me-3" style="color: #25D366;"><i class="fa-brands fa-whatsapp"></i></a>
+                                        </div>
+
+                                        <div class="d-flex align-items-center mt-5 flex-wrap mobile-ratings">
+                                            <!-- Google Rating -->
+                                            <div class="d-flex align-items-center me-5 mb-2">
+                                                <i class="fa-brands fa-google fs-1 me-3" style="background: conic-gradient(from 180deg at 50% 50%, #4285f4 0deg, #34a853 90deg, #fbbc05 180deg, #ea4335 270deg, #4285f4 360deg); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                                                <div>
+                                                    <div class="d-flex align-items-center" style="color: #ffc107; font-size: 15px;">
+                                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                        <span class="text-dark fw-bold ms-2">5</span>
+                                                    </div>
+                                                    <div class="fw-bold" style="font-size: 13px; color: #888;">4.8 <span class="fw-normal">| 450 reviews</span></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Practo Rating -->
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="fw-bold fs-3 me-3" style="color: #28328C;">practo</div>
+                                                <div>
+                                                    <div class="d-flex align-items-center" style="color: #ffc107; font-size: 15px;">
+                                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                        <span class="text-dark fw-bold ms-2">5</span>
+                                                    </div>
+                                                    <div class="fw-bold" style="font-size: 13px; color: #888;">4.8 <span class="fw-normal">| 450 reviews</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>

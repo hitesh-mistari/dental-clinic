@@ -225,8 +225,7 @@
 				 header.addClass('autoshow');
 			 }
          }
-
-
+         de_counter();
      };
      /* --------------------------------------------------
       * plugin | owl carousel
@@ -731,7 +730,7 @@
          jQuery('.timer').each(function() {
              var imagePos = jQuery(this).offset().top;
              var topOfWindow = jQuery(window).scrollTop();
-             if (imagePos < topOfWindow + jQuery(window).height() && v_count === '0') {
+             if (imagePos < topOfWindow + jQuery(window).height() + 200 && v_count === '0') {
                  jQuery(function($) {
                      // start all the timers
                      jQuery('.timer').each(count);
@@ -1538,6 +1537,7 @@
             itemSelector: '.grid-item'
         });
         grid_gallery();
+        de_counter();
     });
     
  })(jQuery);
