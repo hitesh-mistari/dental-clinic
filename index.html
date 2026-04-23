@@ -206,10 +206,11 @@
 
         .badge-title {
             font-size: 16px;
-            font-weight: 700;
-            color: #3f4754;
+            font-weight: 500;
+            color: #6A6A6A;
             letter-spacing: 0.1px;
             line-height: 1.2;
+            margin-bottom: 4px;
         }
 
         .rating-row {
@@ -219,7 +220,7 @@
         }
 
         .rating-number {
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 700;
             color: #f4a71d;
             line-height: 1;
@@ -231,8 +232,8 @@
         }
 
         .badge-star {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             fill: #f4a71d;
         }
 
@@ -280,6 +281,64 @@
             }
         }
 
+    </style>
+
+    <style>
+        /* Doctor Profile Mobile Responsive */
+        @media (max-width: 767px) {
+            .bg-color-op-1 .p-5 {
+                padding: 1.5rem !important;
+            }
+            
+            .bg-color-op-1 h2[style*="font-size: 36px"] {
+                font-size: 24px !important;
+            }
+            
+            .bg-color-op-1 .col-md-7,
+            .bg-color-op-1 .col-md-5 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .bg-color-op-1 .col-6 span {
+                font-size: 11px !important;
+                line-height: 1.3 !important;
+            }
+            
+            .bg-color-op-1 .me-2[style*="width: 36px"] {
+                width: 32px !important;
+                height: 32px !important;
+                margin-right: 6px !important;
+            }
+            
+            .bg-color-op-1 .btn-main,
+            .bg-color-op-1 .btn[style*="border: 2px"] {
+                width: 100% !important;
+                justify-content: center !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .bg-color-op-1 .gap-3 {
+                gap: 0.5rem !important;
+            }
+            
+            .bg-color-op-1 .ms-auto {
+                margin-left: 0 !important;
+                margin-top: 15px !important;
+                width: 100% !important;
+                justify-content: center !important;
+            }
+            
+            .bg-color-op-1 .col-lg-5 .position-relative {
+                padding: 20px !important;
+            }
+            
+            .bg-color-op-1 .position-relative div[style*="bottom: 50px"] {
+                bottom: 20px !important;
+                left: 20px !important;
+                padding: 10px 15px !important;
+            }
+        }
     </style>
 
 </head>
@@ -616,7 +675,7 @@
                                         <!-- Doctor Name with verification badge -->
                                         <div class="d-flex align-items-center mb-3">
                                             <h2 class="mb-0 me-2" style="color: #10244b; font-size: 36px; font-weight: 700;">Dr. Tulsi Bhutada Amesar</h2>
-                                            <i class="icofont-verification-check" style="font-size: 28px; color: #1976d2;"></i>
+                                            
                                         </div>
 
                                         <!-- Credentials -->
@@ -653,7 +712,9 @@
                                                     <div class="col-6">
                                                         <div class="d-flex align-items-center">
                                                             <div class="me-2" style="width: 36px; height: 36px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                                                <i class="icofont-teeth" style="font-size: 18px; color: #1976d2;"></i>
+                                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12 2C10.9 2 10 2.9 10 4V6H8C6.9 6 6 6.9 6 8V20C6 21.1 6.9 22 8 22H16C17.1 22 18 21.1 18 20V8C18 6.9 17.1 6 16 6H14V4C14 2.9 13.1 2 12 2ZM12 4C12.6 4 13 4.4 13 5V6H11V5C11 4.4 11.4 4 12 4ZM8 8H16V20H8V8ZM10 10V18H14V10H10Z" fill="#1976d2"/>
+                                                                </svg>
                                                             </div>
                                                             <span style="color: #666; font-size: 14px;">Braces & Aligners</span>
                                                         </div>
@@ -674,7 +735,7 @@
 
                                         <!-- Action Buttons -->
                                         <div class="d-flex align-items-center flex-wrap gap-3">
-                                            <a href="tel:+917405940229" class="btn-main fx-slide" style="padding: 12px 28px; font-size: 15px; display: inline-flex; align-items: center; white-space: nowrap;">
+                                            <a href="tel:+917405940229" class="btn-main" style="padding: 12px 28px; font-size: 15px; display: inline-flex; align-items: center; white-space: nowrap;">
                                                 <i class="icofont-calendar" style="margin-right: 8px;"></i>Book Appointment
                                             </a>
                                             <a href="tel:+917405940229" class="btn" style="padding: 12px 28px; font-size: 15px; border: 2px solid #1976d2; color: #1976d2; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; white-space: nowrap;">

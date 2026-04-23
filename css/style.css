@@ -12875,3 +12875,49 @@ img {
         max-width: 100% !important;
     }
 }
+
+
+/* Doctor Profile Section - Mobile Responsive */
+@media (max-width: 767px) {
+    .doctor-profile-section .col-lg-7 .p-5 {
+        padding: 20px !important;
+    }
+    
+    .doctor-profile-section h2 {
+        font-size: 28px !important;
+    }
+    
+    .doctor-profile-section .col-md-7,
+    .doctor-profile-section .col-md-5,
+    .doctor-profile-section .col-md-12 {
+        width: 100% !important;
+    }
+    
+    .doctor-profile-section .row.g-4 {
+        gap: 1.5rem !important;
+    }
+    
+    .doctor-profile-section .col-6 span {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .doctor-profile-section .me-2 {
+        margin-right: 8px !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .doctor-profile-section .btn-main,
+    .doctor-profile-section .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .doctor-profile-section .ms-auto {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        justify-content: center !important;
+    }
+}
