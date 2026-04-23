@@ -24,7 +24,7 @@ Table of content:
 /* import fonts */
 /* ================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* ================================================== */
@@ -44,14 +44,15 @@ Table of content:
 /* variables */
 /* ================================================== */
 * {
+  --bs-font-sans-serif: "Inter", "Inter", sans-serif;
   /* body font */
-  --body-font: "Inter", Helvetica, Arial, sans-serif;
+  --body-font: "Inter", "Inter", sans-serif;
   --body-font-size: 16px;
   --body-font-color: #93a0af;
   --body-font-color-dark: rgba(255, 255, 255, .6);
   --body-font-weight: 400;
   /* heading font */
-  --heading-font: "Urbanist", Helvetica, Arial, sans-serif;  
+  --heading-font: "Inter", "Inter", sans-serif;  
   --heading-font-weight: 600;
   --heading-font-color: #10244b;
   --heading-text-transform: none;
@@ -646,6 +647,70 @@ header.header-float.header-light .header-inner{
   float: left;
 }
 
+#subheader.service-hero {
+  background: #10244b !important;
+  padding: 140px 0 56px;
+  text-align: left !important;
+}
+
+#subheader.service-hero.service-hero-center {
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+}
+
+#subheader.service-hero.service-hero-center .container {
+  width: 100%;
+}
+
+#subheader.service-hero .service-hero-kicker {
+  color: #4db6ac;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+#subheader.service-hero .service-hero-title {
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.12;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#subheader.service-hero .service-hero-description {
+  color: rgba(255, 255, 255, .8);
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 720px;
+}
+
+@media (max-width: 767px) {
+  #subheader.service-hero {
+    padding: 104px 0 42px;
+  }
+
+  #subheader.service-hero.service-hero-center {
+    min-height: 64vh;
+  }
+
+  #subheader.service-hero .service-hero-title {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  #subheader.service-hero .service-hero-description {
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 100%;
+  }
+}
+
 
 /* ================================================== */
 /* navigation */
@@ -1198,7 +1263,7 @@ header.header-mobile.header-center #logo-center{
 /* ================================================== */
 
 section {
-  padding: 120px 0 120px 0;
+  padding: 100px 0 100px 0;
 }
 
 #content.zebra section:nth-child(even) {
@@ -12761,3 +12826,52 @@ img {
     }
 }
 
+
+/* Global Hero Section Styling (Matches about-hero) */
+.about-hero {
+    background: #10244b !important;
+    text-align: left !important;
+    min-height: 44vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 56px !important;
+}
+
+.about-hero .container {
+    width: 100%;
+}
+
+.about-hero h1 {
+    color: #ffffff !important;
+}
+
+.about-hero p {
+    color: rgba(255, 255, 255, .8) !important;
+}
+
+.about-hero span {
+    color: #4db6ac !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        min-height: 50vh;
+        padding: 104px 0 42px !important;
+    }
+
+    .about-hero h1 {
+        font-size: 52px !important;
+        line-height: 1.12;
+    }
+
+    .about-hero p {
+        font-size: 16px !important;
+        max-width: 100% !important;
+    }
+}

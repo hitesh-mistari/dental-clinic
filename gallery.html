@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Shared on NullPHPScript.com - Dentia — Dentist & Dental Clinic Website Template</title>
+    <title>Dental Clinic Gallery | The Dental Edge Nashik</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Dentia — Dentist & Dental Clinic Website Template" name="description">
-    <meta content="" name="keywords">
+    <meta content="View The Dental Edge gallery to see our clinic, dental setup, and treatment outcomes delivered with precision and care in Nashik." name="description">
+    <meta content="dental clinic gallery, dental treatment photos, nashik dentist gallery, dental edge nashik" name="keywords">
     <meta content="" name="author">
     <!-- CSS Files
     ================================================== -->
@@ -18,16 +18,13 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
-            --primary-purple: #6a1b9a;
-            --primary-purple-light: #f3e5f5;
             --dark-section: #10244b;
-            --light-bg: #fdfdfd;
-            --border-color: #e0e0e0;
+            --light-bg: #f8f9fa;
         }
 
         html {
@@ -35,39 +32,25 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif !important;
+            font-family: 'Inter', sans-serif !important;
             color: #333;
+            background-color: var(--light-bg);
         }
 
-        header.transparent.header-light {
-            background: #fff !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        #logo img {
-            max-height: 45px !important;
-        }
-
-        #mainmenu li a {
-            color: #333 !important;
-        }
-
-        #subheader {
-            background: var(--dark-section) !important;
-            padding: 160px 0 70px 0 !important;
-            /* Balanced 70px visual gap top & bottom */
+        .gallery-hero {
+            background: #10244b !important;
             text-align: left !important;
+            min-height: 44vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 56px !important;
         }
 
-        #subheader h1 {
-            font-family: 'Poppins', sans-serif !important;
-            font-weight: 600;
-            font-size: 48px;
-            color: #fff;
-            margin-bottom: 10px;
+        .gallery-hero .container {
+            width: 100%;
         }
 
-        #subheader .gallery-label {
+        .gallery-label {
             color: #4db6ac;
             font-weight: 600;
             text-transform: uppercase;
@@ -77,104 +60,134 @@
             display: block;
         }
 
-        #subheader p {
-            color: #bbb;
+        .gallery-hero h1 {
+            color: #ffffff;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .gallery-hero p {
+            color: rgba(255, 255, 255, .8);
             font-size: 18px;
             max-width: 600px;
         }
 
-        .crumb {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            color: #888;
-            font-size: 14px;
-        }
+        @media (max-width: 767px) {
+            .gallery-hero {
+                min-height: 50vh;
+                padding: 104px 0 42px !important;
+            }
 
-        .crumb li {
-            display: inline;
-        }
+            .gallery-hero h1 {
+                font-size: 52px !important;
+                line-height: 1.12;
+            }
 
-        .crumb li a {
-            color: #aaa;
-            text-decoration: none;
-        }
-
-        .crumb li.active {
-            color: #fff;
-        }
-
-        .crumb li:after {
-            content: "/";
-            margin: 0 8px;
-            color: #555;
-        }
-
-        .crumb li:last-child:after {
-            content: "";
+            .gallery-hero p {
+                font-size: 16px !important;
+                max-width: 100% !important;
+            }
         }
 
         section {
             background: var(--light-bg);
-            padding: 50px 0;
+            padding: 80px 0;
+        }
+
+        #section-gallery {
+            min-height: calc(100vh - 300px);
+            padding: 80px 0;
+        }
+
+        /* Revamped CSS Grid Gallery */
+        #dental-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .gallery-item-wrap {
             position: relative;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: #fff;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item-wrap img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
         .gallery-item-wrap:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item-wrap:hover img {
+            transform: scale(1.05);
         }
 
         .gallery-overlay {
-            background: rgba(16, 36, 75, 0.7);
-            backdrop-filter: blur(4px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(16, 36, 75, 0.8) 0%, rgba(16, 36, 75, 0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .gallery-item-wrap:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: #fff;
+            font-size: 32px;
+            transform: scale(0.5);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+        }
+
+        .gallery-item-wrap:hover .gallery-overlay i {
+            transform: scale(1);
+            opacity: 1;
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 992px) {
-            #logo img {
-                max-height: 35px !important;
-            }
-
-            #subheader {
-                padding: 60px 0 60px 0 !important;
-                text-align: left !important;
-            }
-
-            #subheader h1 {
-                font-size: 32px !important;
-                line-height: 1.2;
-                text-align: left !important;
-            }
-
-            #subheader p {
-                font-size: 16px;
-                margin: 0;
-                text-align: left !important;
-            }
-
-            #subheader .gallery-label {
-                margin-bottom: 10px;
-                text-align: left !important;
-            }
-
             section {
-                padding: 40px 0 !important;
+                padding: 50px 0 !important;
             }
 
+            #dental-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 16px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #dental-gallery {
+                grid-template-columns: 1fr;
+            }
             .gallery-item-wrap {
-                margin-bottom: 20px;
+                aspect-ratio: 16/10;
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -186,7 +199,7 @@
         <!-- preloader end -->
 
         <!-- header begin -->
-        <header class="transparent header-light">
+        <header class="header-light">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -213,16 +226,18 @@
                                             <li><a href="service-dental-implants.html">Dental Implants</a></li>
                                             <li><a href="service-crowns-and-ridges.html">Crowns & Bridges</a></li>
                                             <li><a href="service-laser-dentistry.html">Laser Dentistry</a></li>
-                                            <li><a href="services.html">All Services</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="gallery.html">Gallery</a></li>
                                     <li><a class="menu-item" href="contact.html">Contact</a></li>
                                 </ul>
-
                                 <!-- mainmenu end -->
                             </div>
                             <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="tel:+917405940229" class="btn-main fx-slide"><span>Book Appointment</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -230,12 +245,13 @@
             </div>
         </header>
         <!-- header end -->
+
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
 
             <div id="top"></div>
 
-            <section id="subheader">
+            <section id="subheader" class="section-dark gallery-hero">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -243,160 +259,15 @@
                             <h1 class="wow fadeInUp">Clinical Excellence Gallery</h1>
                             <p class="wow fadeIn" data-wow-delay=".3s">Explore our modern clinic environment and see the
                                 results of our specialized dental treatments.</p>
-
-
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="section-gallery" class="bg-light">
+            <section id="section-gallery">
                 <div class="container">
-
-                    <!-- <div class="row">
-                        <div class="col-md-12 text-center">
-                            <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
-                                <li><a href="#" data-filter="*" class="selected">View All</a></li>
-                                <li><a href="#" data-filter=".dentists">dentists</a></li>
-                                <li><a href="#" data-filter=".facilities">facilities</a></li>
-                                <li><a href="#" data-filter=".services">services</a>
-                                <li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-                    <div id="gallery" class="row g-3 wow fadeIn" data-wow-delay=".3s">
-
-                        <div class="col-md-3 col-sm-6 col-12 item facilities">
-                            <a href="images/gallery/l1.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l1.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item facilities">
-                            <a href="images/gallery/l2.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l2.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item facilities">
-                            <a href="images/gallery/l3.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l3.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item facilities">
-                            <a href="images/gallery/l4.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l4.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item facilities">
-                            <a href="images/gallery/l5.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l5.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-                        <!-- 
-                        <div class="col-md-3 col-sm-6 col-12 item dentists">
-                            <a href="images/gallery/l6.webp" class="image-popup d-block hover">
-                                <div class="relative overflow-hidden rounded-1">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-2 text-center text-white z-3">
-                                        View
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l6.webp" class="w-100 hover-scale-1-2" alt="">
-                                </div>
-                            </a>
-                        </div> -->
-
-                        <div class="col-md-3 col-sm-6 col-12 item dentists">
-                            <a href="images/gallery/l7.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l7.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item dentists">
-                            <a href="images/gallery/l8.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l8.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-12 item services">
-                            <a href="images/gallery/l9.webp" class="image-popup d-block hover">
-                                <div class="gallery-item-wrap">
-                                    <div
-                                        class="absolute start-0 w-100 hover-op-1 abs-middle z-2 text-center text-white z-3">
-                                        <i class="fa fa-search-plus fs-24"></i>
-                                    </div>
-                                    <div class="absolute start-0 w-100 h-100 gallery-overlay hover-op-1 z-2"></div>
-                                    <img src="images/gallery/l9.webp" class="w-100 hover-scale-1-2"
-                                        alt="Clinic Gallery">
-                                </div>
-                            </a>
-                        </div>
-
-
-
-                    </div>
-
-
+                    <!-- Changing ID from gallery to dental-gallery stops template script from breaking the layout -->
+                    <div id="dental-gallery" class="wow fadeIn" data-wow-delay=".3s"></div>
                 </div>
             </section>
 
@@ -468,7 +339,7 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2025 - Dentia by Designesia
+                                    Copyright 2025 - Designed by Hiteshbuilds
                                 </div>
                             </div>
                         </div>
@@ -479,14 +350,101 @@
         <!-- footer end -->
     </div>
 
-
-
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
+    <script>
+        (async function () {
+            var galleryEl = document.getElementById('dental-gallery');
+            if (!galleryEl) return;
+
+            var fallbackImageLinks = [
+                'https://lh3.googleusercontent.com/gps-cs-s/AHVAweoVc0GeedbMSYXlJJC_FyuEZW6UyQLaiplZuZFhHSkyjf1L381Zy8WfLGyEOcHCA68EzLeT6-j7vBMJ7VNARQ-NAaxP-m453xayYBKWsU9U-goKVnZiLIkQylF_ZUs0iYUGnWoGdw=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOe2d19WCFrNfY68YNHOikD1eI7fgIqB3t2vfuc=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNbfp5pKuCpM9Y__1JnWTOC86mLnfAiLsdNH4jj=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipPfVzqbNchFyZztJMhn7iatnAulD5_lD8G6XcyB=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipPnCQi1v6r4KNBzfmsRMgRoxlXOrVXxbYHF4wFe=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipN2y8RuT-i_DDhwGd4coJ1V2cb2WVvlqmaFOLMY=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipM_qfk89YKVN0zDHbzpPDIIqTGlBT5ecRUla5qp=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipO9dy5a4FBbNFoVGxd6f7sKFtJk-FfFY73Eo0oH=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOVCgpS8BD6Pw4jRe-PGTWkMz8nECVrl3GyRZCH=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipM6ZNvLg_3v_R6O1oVdFpKVWF6aHeRzBAIXkQKj=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNMtennMBS321RH_0Fg9abPHFlXKrCXmQNYOZIE=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipPXJZiTFee5C9j1RzTkRyXjqF1Grxtes3rqq-_A=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNU7OoGzHRgOdJ_HV1-KkzksxnQmTD8n_TS6TGf=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOSHAwApqAhh7vQmv8db_nWeRijhnn2yXywY5Qz=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNe9aJEkpgHMTfK1uUzm9F-4uxv1YJpVeVHyY2T=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNolrSykNhWy_tJlKbgc2Z3X7WpsAqTG4e1DIjZ=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOjr56OwPJryVaAzxRTPo_haQHEbnHQ6bF_Ycxk=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipMiM831fJAlLFK77z89a-TEr9cDdrmc6L903396=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOpOuVlRvBdtiDmDgeybJPJ90te4sEYivCyHImN=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOwrHCbqu_vztMZJsWDBEt2UzhAoZ52naNg4AVm=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNjGXU3pyfXuBvuS0qP8dNwEjwuofYuW9cLB84m=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipMMgkxFMF6TLG459wHM6LfUGvNfAPmihM6F5d2x=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNKfaL0EZeCHxpcx0-65EdAfuURlJKgRj_ndm9j=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipNUj6RlE-Lb0Na8aDraH2xnDb5_s0Zpsb3GcZZs=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipOQVrG9BWc4GOrxgZsm9_hQ01A8s2GomrdjAHWj=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipMf6wJl7c2tmQskDRDXeNaDLjFZcB0DPucnWfvx=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipMF1CDteA-1gI46LN_JS7Ze3xa8Ea3gZs5npNi-=w1920-h1080-k-no',
+                'https://lh3.googleusercontent.com/p/AF1QipN5He7tOd5znlTzuCZ5W4C17P4jm27_ATLVkeGM=w1920-h1080-k-no',
+                'https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=NPGCipwLHyrX-T2ckYRZlw&cb_client=unknown_client.gws.gps&w=203&h=100&yaw=236.96721&pitch=0&thumbfov=100'
+            ];
+
+            function setupPopup() {
+                if (window.jQuery && jQuery.fn && jQuery.fn.magnificPopup) {
+                    jQuery('#dental-gallery .image-popup').magnificPopup({
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                }
+            }
+
+            function renderGallery(images) {
+                if (!images.length) {
+                    galleryEl.innerHTML = '<div class="text-center text-muted" style="grid-column: 1 / -1;">No gallery images found.</div>';
+                    return;
+                }
+
+                var html = images
+                    .map(function (item, index) {
+                        var imageUrl = typeof item === 'string' ? item : item.link;
+                        var altText = 'Clinic Gallery Image ' + (index + 1);
+
+                        return (
+                            '<a href="' + imageUrl + '" class="image-popup">' +
+                            '  <div class="gallery-item-wrap">' +
+                            '    <img src="' + imageUrl + '" alt="' + altText + '" loading="lazy" decoding="async">' +
+                            '    <div class="gallery-overlay">' +
+                            '      <i class="fa fa-search-plus"></i>' +
+                            '    </div>' +
+                            '  </div>' +
+                            '</a>'
+                        );
+                    })
+                    .join('');
+
+                galleryEl.innerHTML = html;
+                setupPopup();
+            }
+
+            try {
+                var response = await fetch('data.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('Failed to load data.json');
+
+                var data = await response.json();
+                var images = Array.isArray(data.images) ? data.images.filter(function (item) { return item && item.link; }) : [];
+                renderGallery(images);
+            } catch (error) {
+                renderGallery(fallbackImageLinks);
+                console.error(error);
+            }
+        })();
+    </script>
 </body>
 
 </html>

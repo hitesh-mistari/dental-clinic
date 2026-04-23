@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Shared on NullPHPScript.com - Dentia — Dentist & Dental Clinic Website Template</title>
+    <title>The Dental Edge | Best Dental Clinic in Nashik</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -19,37 +19,71 @@
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
     <style>
+        .service-box {
+            background: #ffffff;
+            border: 1px solid #e4ebf5;
+            border-radius: 18px;
+            padding: 12px;
+            box-shadow: 0 12px 28px rgba(16, 36, 75, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .service-box:hover {
+            transform: translateY(-6px);
+            border-color: #bfd0ea;
+            box-shadow: 0 18px 36px rgba(16, 36, 75, 0.12);
+        }
+        .service-card-content {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 4px 2px;
+            gap: 8px;
+            white-space: normal !important;
+        }
         .service-card-title {
             display: block !important;
-            margin-bottom: 2px;
+            margin-bottom: 0 !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #10244b;
+            letter-spacing: 0;
             overflow: visible !important;
             white-space: normal !important;
         }
         .service-card-desc {
-            display: block !important;
-            margin-bottom: 5px;
-            font-size: 14px;
-            line-height: 1.4;
-            overflow: visible !important;
+            display: block;
+            overflow: visible;
+            min-height: 74px;
+            margin-bottom: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            line-height: 1.55;
+            color: #6f8096;
             white-space: normal !important;
         }
         .service-card-img {
             object-fit: cover;
-            height: 180px;
+            height: 210px;
             width: 100%;
+            border-radius: 14px;
+            margin-bottom: 14px !important;
         }
-
-        /* Desktop specific overrides */
-        @media (min-width: 992px) {
-            .service-card-content {
-                margin-top: -5px !important; /* Pull content closer to image */
-            }
-            .service-card-title {
-                margin-bottom: 0px !important; 
-            }
-            .service-card-desc {
-                margin-bottom: 2px !important; 
-            }
+        .service-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #10244b;
+            text-decoration: none;
+            transition: color 0.2s ease, gap 0.2s ease;
+        }
+        .service-card-link:hover {
+            color: #1e60aa;
+            gap: 10px;
         }
 
         @media (max-width: 767px) {
@@ -64,57 +98,56 @@
                 border-radius: 12px 12px 0 0 !important; /* Top rounded only for mobile */
             }
             .service-card-img {
-                height: 180px !important;
+                height: 150px !important;
+                margin-bottom: 10px !important;
+            }
+            .service-box {
+                padding: 10px;
+                border-radius: 14px;
             }
             .service-card-title {
-                font-size: 13px !important;
+                font-size: 15px !important;
                 display: block !important;
-                margin-top: 2px !important;
-                margin-bottom: 2px !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
                 overflow: visible !important;
                 white-space: normal !important;
             }
             .service-card-desc {
-                font-size: 10px !important;
-                display: block !important;
-                line-height: 1.2 !important;
-                margin-bottom: 2px !important;
-                overflow: visible !important;
+                font-size: 13px !important;
+                line-height: 1.45 !important;
+                min-height: 56px;
                 white-space: normal !important;
-                -webkit-line-clamp: unset !important;
-                text-overflow: clip !important;
             }
-            .mt-auto.fw-bold {
-                font-size: 11px !important;
-                margin-top: 2px !important;
+            .service-card-link {
+                font-size: 13px;
+                font-weight: 500;
+                gap: 5px;
             }
-            .hover.h-100 {
+            .service-box {
                 display: flex !important;
                 flex-direction: column !important;
             }
             /* Ratings mobile fix */
             .mobile-ratings {
-                display: flex !important;
-                flex-direction: row !important;
-                justify-content: flex-start !important;
-                flex-wrap: nowrap !important;
+                display: grid !important;
+                grid-template-columns: 1fr;
                 width: 100%;
-                gap: 15px !important;
+                gap: 12px !important;
                 margin-top: 15px !important;
-                overflow-x: auto;
             }
             .mobile-ratings .badge-title {
-                font-size: 13px !important;
+                font-size: 15px !important;
             }
             .mobile-ratings .rating-number {
-                font-size: 18px !important;
+                font-size: 22px !important;
             }
             .mobile-ratings .badge-star {
-                width: 16px !important;
-                height: 16px !important;
+                width: 18px !important;
+                height: 18px !important;
             }
             .mobile-ratings .badge-sub {
-                font-size: 10px !important;
+                font-size: 12px !important;
             }
             .p-mobile-20 {
                 padding: 20px !important;
@@ -134,32 +167,47 @@
         .google-badge {
             display: inline-flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             padding: 0;
-            border-radius: 12px;
             border: none;
             background: transparent;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0;
+            width: 100%;
         }
 
         .google-logo-img {
-            width: 65px;
-            height: 65px;
+            width: 58px;
+            height: 58px;
             object-fit: contain;
             flex-shrink: 0;
+        }
+
+        .rating-card {
+            border: 1px solid #dce5f2;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 14px;
+            box-shadow: 0 10px 24px rgba(16, 36, 75, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .rating-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(16, 36, 75, 0.13);
+            border-color: #c4d4ea;
         }
 
         .badge-content {
             display: flex;
             flex-direction: column;
-            gap: 2px;
+            gap: 4px;
         }
 
         .badge-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #5f6368;
+            font-size: 16px;
+            font-weight: 700;
+            color: #3f4754;
             letter-spacing: 0.1px;
             line-height: 1.2;
         }
@@ -167,13 +215,13 @@
         .rating-row {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
         }
 
         .rating-number {
-            font-size: 26px;
+            font-size: 30px;
             font-weight: 700;
-            color: #f5a623;
+            color: #f4a71d;
             line-height: 1;
         }
 
@@ -183,33 +231,53 @@
         }
 
         .badge-star {
-            width: 26px;
-            height: 26px;
-            fill: #f5a623;
+            width: 24px;
+            height: 24px;
+            fill: #f4a71d;
         }
 
         .badge-sub {
             font-size: 13px;
             color: #5f6368;
-            margin-top: 1px;
+            margin-top: 0;
+        }
+
+        .badge-sub a {
+            color: #4c5668;
+            text-decoration: none;
+            border-bottom: 1px dotted #aeb8c7;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .badge-sub a:hover {
+            color: #1e60aa;
+            border-color: #1e60aa;
         }
 
         .jd-badge {
             display: inline-flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             padding: 0;
             border: none;
             background: transparent;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
+            width: 100%;
         }
 
         .jd-logo-img {
-            width: 85px;
+            width: 72px;
             height: auto;
             object-fit: contain;
             flex-shrink: 0;
             mix-blend-mode: multiply;
+        }
+
+        @media (min-width: 992px) {
+            .mobile-ratings {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px !important;
+            }
         }
 
     </style>
@@ -252,7 +320,6 @@
                                             <li><a href="service-dental-implants.html">Dental Implants</a></li>
                                             <li><a href="service-crowns-and-ridges.html">Crowns & Bridges</a></li>
                                             <li><a href="service-laser-dentistry.html">Laser Dentistry</a></li>
-                                            <li><a href="services.html">All Services</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="gallery.html">Gallery</a></li>
@@ -263,7 +330,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="booking.html" class="btn-main fx-slide"><span>Book Appointment</span></a>
+                                    <a href="tel:+917405940229" class="btn-main fx-slide"><span>Book Appointment</span></a>
                                     <span id="menu-btn"></span>
                                 </div>
 
@@ -302,62 +369,66 @@
 
                             <div class="d-flex align-items-center mt-3 flex-wrap mobile-ratings text-dark">
                                 <!-- Google Logo Image -->
-                                <div class="google-badge me-lg-4">
-                                    <img src="images/misc/google-logo.svg" class="google-logo-img" alt="Google">
+                                <div class="rating-card">
+                                    <div class="google-badge">
+                                        <img src="images/misc/google-logo.svg" class="google-logo-img" alt="Google">
 
-                                    <div class="badge-content">
-                                        <div class="badge-title">Google Rating</div>
-                                        <div class="rating-row">
-                                            <span class="rating-number">4.8</span>
-                                            <div class="badge-stars">
-                                                <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                                </svg>
+                                        <div class="badge-content">
+                                            <div class="badge-title">Google Rating</div>
+                                            <div class="rating-row">
+                                                <span class="rating-number">4.8</span>
+                                                <div class="badge-stars">
+                                                    <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                    </svg>
+                                                </div>
                                             </div>
+                                            <div class="badge-sub"><a href="https://www.google.com/search?q=The+Dental+Edge+Nashik+reviews" target="_blank" rel="noopener noreferrer">See all our reviews</a></div>
                                         </div>
-                                        <div class="badge-sub">See all our reviews</div>
                                     </div>
                                 </div>
                                 
                                 <!-- JustDial Logo Image -->
-                                <div class="jd-badge">
-                                    <img src="images/misc/jd-logo.png" class="jd-logo-img" alt="JustDial">
+                                <div class="rating-card">
+                                    <div class="jd-badge">
+                                        <img src="images/just-dial.webp" class="jd-logo-img" alt="JustDial">
 
-                                    <div class="badge-content">
-                                        <div class="badge-title">JustDial Rating</div>
-                                        <div class="rating-row">
-                                            <span class="rating-number">4.8</span>
-                                            <div class="badge-stars">
-                                                <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
-                                                </svg>
-                                                <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
-                                                </svg>
+                                        <div class="badge-content">
+                                            <div class="badge-title">JustDial Rating</div>
+                                            <div class="rating-row">
+                                                <span class="rating-number">4.8</span>
+                                                <div class="badge-stars">
+                                                    <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
+                                                    </svg>
+                                                    <svg class="badge-star" viewBox="0 0 51 48" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M25.5 2L31.8 16.2L47.5 17.6L36 27.8L39.3 43.2L25.5 35.3L11.7 43.2L15 27.8L3.5 17.6L19.2 16.2Z" fill="#f5a623" />
+                                                    </svg>
+                                                </div>
                                             </div>
+                                            <div class="badge-sub"><a href="https://www.justdial.com/Nashik/The-Dental-Edge" target="_blank" rel="noopener noreferrer">See all our reviews</a></div>
                                         </div>
-                                        <div class="badge-sub">See all our reviews</div>
                                     </div>
                                 </div>
                             </div>
@@ -367,17 +438,6 @@
 
                         <div class="col-lg-6">
                             <div class="relative">
-                                <div class="bg-dark text-light shadow-1 abs end-0 abs-middle p-4 rounded-1 overflow-hidden z-2 wow fadeInRight d-none d-md-block"
-                                    data-wow-delay=".5s">
-                                    <div class="d-flex justify-content-center">
-                                        <i class="fs-60 text-white icon_clock"></i>
-                                        <div class="ms-3">
-                                            <h4 class="mb-0">Opening Hours</h4>
-                                            Mon to Sat: 10:00 AM – 8:00 PM
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="bg-white shadow-1 abs start-0 bottom-10 p-4 rounded-1 overflow-hidden z-2 wow fadeInLeft d-none d-md-block"
                                     data-wow-delay=".7s">
                                     <div class="d-flex justify-content-center">
@@ -455,52 +515,52 @@
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-3 col-sm-6 col-6">
-                            <div class="hover h-100">
+                            <div class="hover h-100 service-box">
                                 <div class="h-100 d-flex flex-column">
                                     <img src="images/RCT.webp" class="service-card-img rounded-1 mb-3 wow scaleIn" alt="">
                                     <div class="service-card-content mt-1 wow fadeInUp flex-grow-1 d-flex flex-column">
                                         <h4 class="service-card-title">Root Canal Treatment (RCT)</h4>
-                                        <p class="service-card-desc">Treat tooth infection and save your natural tooth with a comfortable procedure. Our team ensures a painless treatment to restore your oral health and preserve your smile.</p>
-                                        <a href="service-root-canal-treatment.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                        <p class="service-card-desc">Treat tooth infection and save your natural tooth with a comfortable procedure. </p>
+                                        <a href="service-root-canal-treatment.html" class="service-card-link">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-sm-6 col-6">
-                            <div class="hover h-100">
+                            <div class="hover h-100 service-box">
                                 <div class="h-100 d-flex flex-column">
                                     <img src="images/orthodontic-treatments.jpg" class="service-card-img rounded-1 mb-3 wow scaleIn" alt="">
                                     <div class="service-card-content mt-1 wow fadeInUp flex-grow-1 d-flex flex-column">
                                         <h4 class="service-card-title">Dental Braces</h4>
-                                        <p class="service-card-desc">Align your teeth properly for a better smile and improved bite with our custom solutions. We offer advanced braces tailored to your lifestyle for a healthy, confident smile.</p>
-                                        <a href="service-braces-and-ligners.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                        <p class="service-card-desc">Align your teeth properly for a better smile and improved bite with our custom solutions. </p>
+                                        <a href="service-braces-and-ligners.html" class="service-card-link">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-sm-6 col-6">
-                            <div class="hover h-100">
+                            <div class="hover h-100 service-box">
                                 <div class="h-100 d-flex flex-column">
                                     <img src="images/invisalign-treatment.jpg" class="service-card-img rounded-1 mb-3 wow scaleIn" alt="">
                                     <div class="service-card-content mt-1 wow fadeInUp flex-grow-1 d-flex flex-column">
                                         <h4 class="service-card-title">Dental Implants</h4>
-                                        <p class="service-card-desc">Replace missing teeth with a high-quality permanent solution that looks and feels natural. Our durable implants provide a strong, long-lasting foundation for a youthful appearance.</p>
-                                        <a href="service-dental-implants.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                        <p class="service-card-desc">Replace missing teeth with a high-quality permanent solution that looks and feel.</p>
+                                        <a href="service-dental-implants.html" class="service-card-link">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-sm-6 col-6">
-                            <div class="hover h-100">
+                            <div class="hover h-100 service-box">
                                 <div class="h-100 d-flex flex-column">
                                     <img src="images/crowns-and-bridge.jpg" class="service-card-img rounded-1 mb-3 wow scaleIn" alt="">
                                     <div class="service-card-content mt-1 wow fadeInUp flex-grow-1 d-flex flex-column">
                                         <h4 class="service-card-title">Crowns & Bridges</h4>
-                                        <p class="service-card-desc">Repair damaged teeth or fill gaps with natural-looking restorations that restore strength. Our custom-made crowns and bridges are designed to match your teeth perfectly.</p>
-                                        <a href="service-crowns-and-ridges.html" class="fw-bold text-decoration-none mt-auto" style="color: #10244b;">Read more <i class="fa fa-arrow-right ms-1"></i></a>
+                                        <p class="service-card-desc">Repair damaged teeth or fill gaps with natural-looking restorations that restore </p>
+                                        <a href="service-crowns-and-ridges.html" class="service-card-link">Read more <i class="fa fa-arrow-right ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -516,48 +576,123 @@
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center">
                             <div class="subtitle wow fadeInUp mb-3">Meet Your Dentist</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Personal Care Focused on Your Comfort</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Personal Care Focused</h2>
                             <p class="wow fadeInUp">At The Dental Edge, every patient is treated with attention,
-                                clarity, and care. Dr. Tulsi Bhutada Amesar ensures a comfortable experience while
-                                providing the right treatment with a clear explanation.</p>
+                                clarity, and care. Dr. Tulsi Bhutada Amesar ensures.</p>
                             <div class="spacer-single"></div>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="bg-light rounded-1 relative overflow-hidden p-4">
+                        <div class="bg-white rounded-5 relative overflow-hidden">
                             <div class="row g-0 align-items-center">
-                                <div class="col-md-4">
-                                    <img src="images/team/1.webp" class="w-100 team-photo-mobile rounded-3" alt="">
+                                <!-- Left Column - Doctor Image -->
+                                <div class="col-lg-5">
+                                    <div class="position-relative" style="padding: 20px; min-height: 100%;">
+                                     
+                                        <img src="images/team/1.webp" class="w-100 rounded-3" alt="Dr. Tulsi Bhutada Amesar" style="position: relative; z-index: 2;">
+                                        
+                                        <!-- Badge at bottom -->
+                                        <div style="position: absolute; bottom: 50px; left: 50px; background: #1976d2; color: white; padding: 15px 20px; border-radius: 12px; display: flex; align-items: center; z-index: 3; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                                            <i class="icofont-tooth" style="font-size: 24px; margin-right: 12px;"></i>
+                                            <div style="line-height: 1.3;">
+                                                <div style="font-size: 13px; font-weight: 600;">Creating healthy smiles</div>
+                                                <div style="font-size: 12px; opacity: 0.9;">with care & compassion</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="h-100 p-40 ps-lg-5 p-mobile-20">
-                                        <h3 class="mb-0">Dr. Tulsi Bhutada Amesar</h3>
-                                        <p class="id-color mb-1 fw-bold">BDS &mdash; 9 Years Experience</p>
-                                        <p class="text-secondary fw-bold" style="font-size:14px;">Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist</p>
 
-                                        <hr style="border-top: 1px dashed #ccc; margin: 20px 0;">
+                                <!-- Right Column - Doctor Information -->
+                                <div class="col-lg-7">
+                                    <div class="px-4 py-3">
+                                        <!-- Header with icon and title -->
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="me-3" style="width: 45px; height: 45px; background: #e3f2fd; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                                <i class="icofont-doctor-alt" style="font-size: 24px; color: #1976d2;"></i>
+                                            </div>
+                                            <span style="color: #1976d2; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 13px;">DENTAL SPECIALIST</span>
+                                        </div>
 
-                                        <p class="text-secondary" style="line-height: 1.8;">
-                                            <strong>Dr. Tulsi Bhutada Amesar</strong> is a Dentist, Dental Surgeon and Cosmetic/Aesthetic Dentist and has an experience of 9 years in these fields. She completed her BDS from Maharashtra University of Health Sciences in 2017.
+                                        <!-- Doctor Name with verification badge -->
+                                        <div class="d-flex align-items-center mb-3">
+                                            <h2 class="mb-0 me-2" style="color: #10244b; font-size: 36px; font-weight: 700;">Dr. Tulsi Bhutada Amesar</h2>
+                                            <i class="icofont-verification-check" style="font-size: 28px; color: #1976d2;"></i>
+                                        </div>
+
+                                        <!-- Credentials -->
+                                        <p class="mb-2" style="color: #1976d2; font-size: 17px; font-weight: 600;">BDS — 9 Years Experience</p>
+                                        <p class="mb-4" style="color: #666; font-size: 15px;">Dentist, Dental Surgeon, Cosmetic/Aesthetic Dentist</p>
+
+                                        <!-- Description -->
+                                        <p class="mb-4" style="color: #666; font-size: 15px; line-height: 1.7;">
+                                            Dr. Tulsi Bhutada Amesar is a dedicated Dental Surgeon and Cosmetic/Aesthetic Dentist with over 9 years of experience in delivering exceptional dental care. She completed her BDS from Maharashtra University of Health Sciences in 2017 and has been committed to creating healthy, beautiful smiles ever since.
                                         </p>
 
-                                        <h5 class="mt-4 text-dark mb-3">Focus Areas</h5>
-                                        <ul class="ul-check">
-                                            <li>Root Canal Treatment</li>
-                                            <li>Braces</li>
-                                            <li>Implants</li>
-                                            <li>Laser Dentistry</li>
-                                        </ul>
-                                        <div class="d-flex align-items-center mt-5">
-                                            <a href="https://www.instagram.com/the.dentaledge/" target="_blank" class="me-3" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background: #1E60AA; text-decoration: none;">
-                                                <i class="fa-brands fa-instagram" style="font-size: 24px; color: #ffffff;"></i>
+                                        <!-- Two Column Layout -->
+                                        <div class="row g-4 mb-4">
+                                            <!-- Left Column - Expertise -->
+                                            <div class="col-md-7">
+                                                <h6 class="mb-3" style="color: #10244b; font-weight: 600; font-size: 15px;">Expertise In</h6>
+                                                <div class="row g-3">
+                                                    <div class="col-6">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2" style="width: 36px; height: 36px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                                <i class="icofont-tooth" style="font-size: 18px; color: #1976d2;"></i>
+                                                            </div>
+                                                            <span style="color: #666; font-size: 14px;">Root Canal Treatment</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2" style="width: 36px; height: 36px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                                <i class="icofont-surgeon-alt" style="font-size: 18px; color: #1976d2;"></i>
+                                                            </div>
+                                                            <span style="color: #666; font-size: 14px;">Dental Implants</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2" style="width: 36px; height: 36px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                                <i class="icofont-teeth" style="font-size: 18px; color: #1976d2;"></i>
+                                                            </div>
+                                                            <span style="color: #666; font-size: 14px;">Braces & Aligners</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="me-2" style="width: 36px; height: 36px; background: #e3f2fd; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                                                <i class="icofont-flash" style="font-size: 18px; color: #1976d2;"></i>
+                                                            </div>
+                                                            <span style="color: #666; font-size: 14px;">Laser Dentistry</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                          
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div class="d-flex align-items-center flex-wrap gap-3">
+                                            <a href="tel:+917405940229" class="btn-main fx-slide" style="padding: 12px 28px; font-size: 15px; display: inline-flex; align-items: center; white-space: nowrap;">
+                                                <i class="icofont-calendar" style="margin-right: 8px;"></i>Book Appointment
                                             </a>
-                                            <a href="https://www.youtube.com/@thedentaledge" target="_blank" class="me-3" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background: #1E60AA; text-decoration: none;">
-                                                <i class="fa-brands fa-youtube" style="font-size: 24px; color: #ffffff;"></i>
+                                            <a href="tel:+917405940229" class="btn" style="padding: 12px 28px; font-size: 15px; border: 2px solid #1976d2; color: #1976d2; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; white-space: nowrap;">
+                                                <i class="icofont-phone" style="margin-right: 8px;"></i>Call Now
                                             </a>
-                                            <a href="https://api.whatsapp.com/send?phone=917405940229" target="_blank" class="me-3" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background: #1E60AA; text-decoration: none;">
-                                                <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #ffffff;"></i>
-                                            </a>
+                                            
+                                            <!-- Social Icons -->
+                                            <div class="d-flex align-items-center gap-2 ms-auto">
+                                                <a href="https://www.instagram.com/the.dentaledge/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 10px; background: #f5f5f5; text-decoration: none; transition: all 0.3s;">
+                                                    <i class="fa-brands fa-instagram" style="font-size: 20px; color: #666;"></i>
+                                                </a>
+                                                <a href="https://www.youtube.com/@thedentaledge" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 10px; background: #f5f5f5; text-decoration: none; transition: all 0.3s;">
+                                                    <i class="fa-brands fa-youtube" style="font-size: 20px; color: #666;"></i>
+                                                </a>
+                                                <a href="https://api.whatsapp.com/send?phone=917405940229" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 10px; background: #f5f5f5; text-decoration: none; transition: all 0.3s;">
+                                                    <i class="fa-brands fa-whatsapp" style="font-size: 20px; color: #666;"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -566,8 +701,7 @@
                     </div>
 
                     <div class="spacer-double"></div>
-                    <div class="spacer-double"></div>
-
+               
                     <div class="row g-4">
                         <div class="col-md-3 col-6 text-center">
                             <div class="de_count wow fadeInRight" data-wow-delay=".0s">
@@ -663,7 +797,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 text-center">
-                            <div class="spacer-double"></div>
                             <div class="subtitle wow fadeInUp mb-3">Patient Experiences</div>
                             <h2 class="wow fadeInUp" data-wow-delay=".2s">Our Happy Patients</h2>
                             <p class="wow fadeInUp">Real feedback from patients who value clear guidance, comfortable
@@ -735,7 +868,7 @@
                         .t-avatar {
                             width: 38px;
                             height: 38px;
-                            border-radius: 50%;
+                            border-radius: 10px;
                             object-fit: cover;
                             background-color: rgba(0, 0, 0, 0.05);
                             display: flex;
@@ -1218,7 +1351,7 @@
                         <div class="col-md-12">
                             <div class="de-flex">
                                 <div class="de-flex-col">
-                                    Copyright 2025 - Dentia by Designesia
+                                    Copyright 2026 - Designed by Hitesbuildss
                                 </div>
                                 <!-- <ul class="menu-simple">
                                     <li><a href="#">Terms &amp; Conditions</a></li>
