@@ -143,21 +143,34 @@
                 justify-content: center !important;
             }
             
+            .bg-color-op-1 .col-lg-5 {
+                overflow: hidden !important;
+            }
+            
             .bg-color-op-1 .col-lg-5 .position-relative {
-                padding: 20px !important;
+                padding: 30px 20px !important;
                 min-height: auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
             }
             
             .bg-color-op-1 .col-lg-5 img {
-                max-height: 300px !important;
-                object-fit: cover !important;
+                max-height: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+                object-position: center !important;
             }
             
             .bg-color-op-1 .position-relative div[style*="bottom: 50px"] {
                 bottom: 15px !important;
-                left: 15px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
                 padding: 8px 12px !important;
                 font-size: 11px !important;
+                width: calc(100% - 40px) !important;
+                max-width: 280px !important;
             }
             
             .bg-color-op-1 .position-relative div[style*="bottom: 50px"] i {
@@ -167,6 +180,11 @@
             
             .bg-color-op-1 .position-relative div[style*="bottom: 50px"] div {
                 font-size: 11px !important;
+            }
+            
+            .bg-color-op-1 .position-relative div[style*="top: 30px"] {
+                top: 20px !important;
+                left: 20px !important;
             }
         }
     </style>
@@ -432,32 +450,32 @@
 
                     <div class="spacer-double"></div>
                
-                    <div class="row g-4">
+                    <div class="row g-4 stats-section">
                         <div class="col-md-3 col-6 text-center">
                             <div class="de_count wow fadeInRight" data-wow-delay=".0s">
                                 <h3 class="fs-40 mb-0"><span class="timer" data-to="1000" data-speed="3000">0</span>+
                                 </h3>
-                                Happy Patients
+                                <span class="stat-label">Happy Patients</span>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 text-center">
                             <div class="de_count wow fadeInRight" data-wow-delay=".2s">
                                 <h3 class="fs-40 mb-0"><span class="timer" data-to="300" data-speed="3500">0</span>+
                                 </h3>
-                                Root Canal Treatments
+                                <span class="stat-label">Root Canal Treatments</span>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 text-center">
                             <div class="de_count wow fadeInRight" data-wow-delay=".4s">
                                 <h3 class="fs-40 mb-0"><span class="timer" data-to="200" data-speed="3000">0</span>+
                                 </h3>
-                                Dental Implants
+                                <span class="stat-label">Dental Implants</span>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 text-center">
                             <div class="de_count wow fadeInRight" data-wow-delay=".6s">
                                 <h3 class="fs-40 mb-0"><span class="timer" data-to="6" data-speed="3000">0</span>+</h3>
-                                Years of Exeperience
+                                <span class="stat-label">Years of Experience</span>
                             </div>
                         </div>
                     </div>
